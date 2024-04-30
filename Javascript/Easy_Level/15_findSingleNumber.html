@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findSingleNumber(arr){
+            var unique = null;
+
+        // Loop through each element of the array
+            for(i =0; i< arr.length; i++){
+                var currentNum = arr[i];
+                var isUnique = true;
+
+            //Check if the current number is unique by comparing it to other numbers
+            for(j = 0; j < arr.length; j++){
+                if(i !== j && currentNum === arr[j]){
+                    isUnique = false // duplicate is found, mark it as not unique
+                    break;
+                }
+            }
+            //If the current number is unique, assign it to the unique variable and break the loop
+            if(isUnique){
+                unique = currentNum;
+                break;
+            }
+            }
+            return unique
+        }
+        var arr=[2,2,2,3,3,4,4,4,4,5];
+        console.log(findSingleNumber(arr));
+    </script>
+</body>
+</html>

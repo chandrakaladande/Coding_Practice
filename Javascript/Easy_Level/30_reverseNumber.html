@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function reverseNum(num){
+            let rev = 0 , digit;
+            while(num > 0){
+                digit = num % 10;
+                rev = rev * 10 + digit;
+                num = Math.floor(num / 10)
+            }
+            return rev;
+        }
+        var num=123;
+        console.log(reverseNum(num))
+    </script>
+</body>
+</html>

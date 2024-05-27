@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        function insertElementAtIndex(arr , element , index){
+            //Check if the index is valid
+            if(index < 0 || index > arr.length){
+                console.log("Invalid Index");
+                return arr
+            }
+
+            // Create a new array to hold the modified elements
+            let newArr = [];
+
+            //copy the elements from the original array to the new array until the specified index
+            for(let i = 0; i< index ; i++){
+                newArr.push(arr[i])
+            }
+
+            //Insert the new element at the specified index
+            newArr.push(element);
+
+            //copy remanining elements from the original array to the new array
+            for(let i = index ; i< arr.length; i++){
+                newArr.push(arr[i]);
+            }
+            return newArr
+        }
+        var arr = [1,2,3,4,5];
+        var elementToInsert = 10;
+        var insertionIndex = 2;
+        console.log(insertElementAtIndex(arr,elementToInsert,insertionIndex));
+
+   </script>
+</body>
+</html>

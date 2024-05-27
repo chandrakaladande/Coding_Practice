@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countOccurences(str , char){
+        let count = 0
+        for(var i = 0 ; i < str.length; i++){
+            if(str[i] == char){
+                count ++
+            }
+        }
+        return count
+
+        }
+        let str = "hello";
+        let char = 'l';
+        console.log(countOccurences(str, char))
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function longestStringInArr(arr){
+           let longestString = "";
+           for(let str of arr){
+             if(str.length > longestString.length){
+                longestString = str;
+             }
+           }
+           return longestString;
+        }
+        var arr = ['nik', 'mikhil', 'Cow','Elephant'];
+        console.log(longestStringInArr(arr));
+
+        //Success
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function toArray(obj){
+        //object.keys will gives a array of the object keys
+        //by using map method iterate the keys and values
+          return Object.keys(obj).map(key =>[key , obj[key]])
+
+        }
+        let object = {a:1 , b:2};
+        const result = toArray(object);
+        console.log(result);
+    </script>
+</body>
+</html>

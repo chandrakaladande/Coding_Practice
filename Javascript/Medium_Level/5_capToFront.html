@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function capToFront(str){
+            let lowerCaseLetters = "";
+            let upperCaseLetters = "";
+            for(let char of str){
+                if(char == char.toUpperCase() && char != char.toLowerCase()){
+                    upperCaseLetters += char;
+                }
+                else{
+                    lowerCaseLetters += char;
+                }
+            }
+            return upperCaseLetters + lowerCaseLetters
+        }
+        var str = "hApPYBiRthDaY";
+        console.log(capToFront(str))
+    </script>
+</body>
+</html>

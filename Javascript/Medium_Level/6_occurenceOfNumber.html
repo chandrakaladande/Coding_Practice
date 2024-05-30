@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countOccurence(arr,numFind){
+           let count = 0;
+           for(let i=0; i < arr.length; i++){
+             if(arr[i] == numFind){
+                count ++
+             }
+           }
+           return count;
+        }
+        let arr = [1,6,3,1,5,9,7,2,1,9,3,7,8,9,10];
+        console.log(`1 present ${countOccurence(arr , 1)} times`);
+        console.log(`2 present ${countOccurence(arr , 2)} times`);
+        console.log(`3 present ${countOccurence(arr , 3)} times`);
+        console.log(`5 present ${countOccurence(arr , 5)} times`);
+
+        //Success
+
+    </script>
+</body>
+</html>

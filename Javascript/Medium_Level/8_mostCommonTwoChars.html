@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function mostCommonTwoChars(str) {
+            const charCount = {};
+
+            // Count the occurrences of each character
+            for (let i = 0; i < str.length; i++) {
+                const char = str[i];
+                if (char !== ' ') { // Ignoring spaces
+                    if (!charCount[char]) {
+                        charCount[char] = 1;
+                    } else {
+                        charCount[char]++;
+
+                    }
+                    console.log(charCount)
+                }
+            }
+
+            // Find the two characters with the highest counts
+            let max1 = '', max2 = '';
+            let maxCount1 = 0, maxCount2 = 0;
+
+            for (let char in charCount) {
+                if (charCount[char] > maxCount1) {
+                    maxCount2 = maxCount1;
+                    max2 = max1;
+                    maxCount1 = charCount[char];
+                    max1 = char;
+                } else if (charCount[char] > maxCount2) {
+                    maxCount2 = charCount[char];
+                    max2 = char;
+                }
+            }
+
+            return [max1, max2];
+        }
+
+        const input = 'Hii i am ram';
+        const result = mostCommonTwoChars(input);
+        console.log(result);
+
+    </script>
+</body>
+
+</html>

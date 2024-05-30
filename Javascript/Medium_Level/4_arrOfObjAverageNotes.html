@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function calculateAverageNotes(arr) {
+
+            return arr.map((student) => {
+                let avgNote = 0;
+                if (student.notes.length > 0) {
+                    const sum = student.notes.reduce((total, note) => total + note, 0);
+                    avgNote = sum / student.notes.length;
+                }
+                return {
+                    name: student.name,
+                    avgNote: avgNote
+                }
+
+            })
+
+
+        }
+        var arr = [
+            { name: "John", notes: [3, 5, 4] }
+        ];
+        console.log(calculateAverageNotes(arr))
+    </script>
+</body>
+
+</html>
